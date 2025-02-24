@@ -32,7 +32,7 @@ En este playbook instalaremos el servidor web `nginx` en un sistema Ubuntu/Debia
 ansible-playbook instalar_nginx.yaml
 ```
 
-#### **Verificación**  
+#### **Verificación (En el cliente)**  
 ```bash
 systemctl status nginx
 ```
@@ -62,7 +62,7 @@ Este playbook actualizará todos los paquetes instalados en el sistema a sus úl
 ansible-playbook actualizar_sistema.yaml
 ```
 
-#### **Verificación**  
+#### **Verificación (En el cliente)**  
 ```bash
 apt list --upgradable
 ```
@@ -89,7 +89,7 @@ En este playbook eliminaremos el paquete `apache2` si está instalado.
 ansible-playbook eliminar_apache.yaml
 ```
 
-#### **Verificación**  
+#### **Verificación (En el cliente)**  
 ```bash
 dpkg -l | grep apache2
 ```
