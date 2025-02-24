@@ -37,8 +37,15 @@ ansible-playbook cambiar_hostname.yaml
 hostname
 ```
 El comando debería devolver `servidor1`.
+--- 
+
+_Ejecucion:_
 
 ![ejecucion1](/img/ejecucion1.png)
+---
+
+_Comprobacion:_
+
 ![comprobacion1](/img/comprobacion1.png)
 
 ---
@@ -67,8 +74,15 @@ ansible-playbook verificar_hostname.yaml
 
 #### **Verificación (En el cliente)**  
 El playbook imprimirá el nombre actual del host.
+--- 
+
+_Ejecucion:_
 
 ![ejecucion2](/img/ejecucion2.png)
+---
+
+_Comprobacion:_
+
 ![comprobacion2](/img/comprobacion2.png)
 
 ---
@@ -98,8 +112,15 @@ ansible-playbook cambiar_hostname_variable.yaml
 hostname
 ```
 Debería devolver el nuevo nombre del host, `servidor-dinamico`.
+--- 
+
+_Ejecucion:_
 
 ![ejecucion3](/img/ejecucion3.png)
+---
+
+_Comprobacion:_
+
 ![comprobacion3](/img/comprobacion3.png)
 
 ---
