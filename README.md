@@ -11,7 +11,7 @@
 El módulo `hostname` de Ansible permite gestionar el nombre del host de un sistema. Se utiliza para cambiar el nombre del host o verificar el nombre actual. Este módulo es útil cuando necesitas automatizar la configuración de nombres de máquina a través de tus servidores, asegurando consistencia en el entorno.
 ---
 
-## **2.- Ejemplos de funcionamiento**  
+### **2.- Ejemplos de funcionamiento**  
 
 ### **Ejemplo 1: Cambiar el nombre del host**  
 - Este playbook cambia el nombre del host de a `servidor1` en un sistema Ubuntu/Debian.
