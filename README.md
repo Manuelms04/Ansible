@@ -2,109 +2,106 @@
 
 ![ansible](/ansible1.png)
 
-# **Estudio del Módulo `apt` en Ansible**  
+# **Estudio del Módulo `hostname` en Ansible**  
 
-## **1.- Nombre del módulo: `apt`**  
+## **1.- Nombre del módulo: `hostname`**  
 
 ### **Descripción**  
-El módulo `apt` de Ansible se utiliza para gestionar paquetes en sistemas basados en Debian y Ubuntu. Permite instalar, actualizar, eliminar y administrar paquetes utilizando el gestor de paquetes `apt`. Es muy útil para la automatización de la gestión de software en servidores.
-
+El módulo `hostname` de Ansible permite gestionar el nombre del host de un sistema. Se utiliza para cambiar el nombre del host o verificar el nombre actual. Este módulo es útil cuando necesitas automatizar la configuración de nombres de máquina a través de tus servidores, asegurando consistencia en el entorno.
 ---
 
 ## **2.- Ejemplos de funcionamiento**  
 
-### **Ejemplo 1: Instalar un paquete**  
-En este playbook instalaremos el servidor web `nginx` en un sistema Ubuntu/Debian.
+### **Ejemplo 1: Cambiar el nombre del host**  
+Este playbook cambia el nombre del host de a `servidor1` en un sistema Ubuntu/Debian.
 
-#### **Archivo:** `instalar_nginx.yaml`
+#### **Archivo:** `cambiar_hostname.yaml`
 ```yaml
-- name: Instalar Nginx en un servidor Debian/Ubuntu
+- name: Cambiar el nombre del host a servidor1
   hosts: all  # Reemplazar con el nombre del host o grupo de hosts
   become: true  # Permite ejecutar el playbook con permisos de superusuario  
   tasks:
-    - name: Instalar el paquete Nginx
-      ansible.builtin.apt:
-        name: nginx
-        state: present
+    - name: Establecer el nombre del host
+      ansible.builtin.hostname:
+        name: servidor1
 ```
 #### **Comando para ejecutar el Playbook**
 ```bash
-ansible-playbook instalar_nginx.yaml
+ansible-playbook cambiar_hostname.yaml
 ```
 
 #### **Verificación (En el cliente)**  
 ```bash
-systemctl status nginx
+hostname
 ```
-Si `nginx` está en ejecución, la instalación fue exitosa.
+El comando debería devolver `servidor1`.
 
-![Captura de instalación](/img/instalar_nginx.png)
+![comprobacion1](/img/comprobacion1.png)
 
 ---
 
-### **Ejemplo 2: Actualizar todos los paquetes del sistema**  
-Este playbook actualizará todos los paquetes instalados en el sistema a sus últimas versiones.
+### **Ejemplo 2: Verificar el nombre del host**  
+Este playbook obtiene el nombre del host actual del sistema sin realizar ningún cambio.
 
-#### **Archivo:** `actualizar_sistema.yaml`
+#### **Archivo:** `verificar_hostname.yaml`
 ```yaml
-- name: Actualizar los paquetes del sistema
+- name: Verificar el nombre del host
   hosts: all  # Reemplazar con el nombre del host o grupo de hosts
-  become: true  # Permite ejecutar el playbook con permisos de superusuario  
   tasks:
-    - name: Actualizar la lista de paquetes
-      ansible.builtin.apt:
-        update_cache: yes
+    - name: Obtener el nombre del host
+      ansible.builtin.hostname:
+        name: "{{ ansible_hostname }}"
+      register: result
 
-    - name: Actualizar todos los paquetes
-      ansible.builtin.apt:
-        upgrade: dist
+    - name: Mostrar el nombre del host
+      debug:
+        msg: "El nombre del host es: {{ result }}"
 ```
 #### **Comando para ejecutar el Playbook**
 ```bash
-ansible-playbook actualizar_sistema.yaml
+ansible-playbook verificar_hostname.yaml
 ```
 
 #### **Verificación (En el cliente)**  
-```bash
-apt list --upgradable
-```
-Si no hay paquetes listados, significa que el sistema está actualizado.
+El playbook imprimirá el nombre actual del host.
 
-![Captura de actualización](/img/actualizar_sistema.png)
+
+![comprobacion2](/img/comprobacion2.png)
 
 ---
 
-### **Ejemplo 3: Eliminar un paquete**  
-En este playbook eliminaremos el paquete `apache2` si está instalado.
+### **Ejemplo 3: Cambiar el nombre del host con el uso de una variable**  
+Este playbook cambia dinámicamente el nombre del host según una variable definida.
 
-#### **Archivo:** `eliminar_apache.yaml`
+#### **Archivo:** `cambiar_hostname_variable.yaml`
 ```yaml
-- name: Eliminar Apache2 del sistema
+- name: Cambiar el nombre del host con una variable
   hosts: all  # Reemplazar con el nombre del host o grupo de hosts
   become: true  # Permite ejecutar el playbook con permisos de superusuario  
+  vars:
+    nuevo_hostname: servidor-dinamico
   tasks:
-    - name: Eliminar el paquete Apache2
-      ansible.builtin.apt:
-        name: apache2
-        state: absent
+    - name: Cambiar el nombre del host
+      ansible.builtin.hostname:
+        name: "{{ nuevo_hostname }}"
 ```
 #### **Comando para ejecutar el Playbook**
 ```bash
-ansible-playbook eliminar_apache.yaml
+ansible-playbook cambiar_hostname_variable.yaml
 ```
 
 #### **Verificación (En el cliente)**  
 ```bash
-dpkg -l | grep apache2
+hostname
 ```
-Si no hay salida, significa que `apache2` ha sido eliminado correctamente.
+Debería devolver el nuevo nombre del host, `servidor-dinamico`.
 
-![Captura de eliminación](/img/eliminar_apache.png)
+![comprobacion3](/img/comprobacion3.png)
 
 ---
 
 ## **3.- Referencias**  
-- [Documentación oficial de Ansible sobre el módulo `apt`](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html)  
+- [Documentación oficial de Ansible sobre el módulo `hostname`](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/hostname_module.html#ansible-collections-ansible-builtin-hostname-module)  
 - [Guía oficial de Ansible](https://docs.ansible.com/ansible/latest/user_guide/index.html)  
 - [Manuel Domínguez](https://github.com/mftienda)
 ---
