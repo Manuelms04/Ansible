@@ -75,7 +75,9 @@ ansible-playbook verificar_hostname.yaml
 ```
 
 #### **Verificación (En el cliente)**  
-El playbook imprimirá el nombre actual del host.
+```bash
+hostname
+```
 
 --- 
 
