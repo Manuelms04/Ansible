@@ -1,6 +1,6 @@
 # Ansible
 
-![ansible](/img/ansible1.png)
+![ansible](/ansible1.png)
 
 # **Estudio del Módulo `apt` en Ansible**  
 
