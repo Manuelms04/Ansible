@@ -38,6 +38,8 @@ systemctl status nginx
 ```
 Si `nginx` está en ejecución, la instalación fue exitosa.
 
+![Captura de instalación](/img/instalar_nginx.png)
+
 ---
 
 ### **Ejemplo 2: Actualizar todos los paquetes del sistema**  
@@ -68,6 +70,8 @@ apt list --upgradable
 ```
 Si no hay paquetes listados, significa que el sistema está actualizado.
 
+![Captura de actualización](/img/actualizar_sistema.png)
+
 ---
 
 ### **Ejemplo 3: Eliminar un paquete**  
@@ -94,6 +98,8 @@ ansible-playbook eliminar_apache.yaml
 dpkg -l | grep apache2
 ```
 Si no hay salida, significa que `apache2` ha sido eliminado correctamente.
+
+![Captura de eliminación](/img/eliminar_apache.png)
 
 ---
 
