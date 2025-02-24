@@ -20,7 +20,7 @@ En este playbook instalaremos el servidor web `nginx` en un sistema Ubuntu/Debia
 ```yaml
 - name: Instalar Nginx en un servidor Debian/Ubuntu
   hosts: all  # Reemplazar con el nombre del host o grupo de hosts
-  become: true  # Permite ejecutar el playbook con permisos de superusuario
+  become: true  # Permite ejecutar el playbook con permisos de superusuario  
   tasks:
     - name: Instalar el paquete Nginx
       ansible.builtin.apt:
@@ -49,7 +49,7 @@ Este playbook actualizará todos los paquetes instalados en el sistema a sus úl
 ```yaml
 - name: Actualizar los paquetes del sistema
   hosts: all  # Reemplazar con el nombre del host o grupo de hosts
-  become: true
+  become: true  # Permite ejecutar el playbook con permisos de superusuario  
   tasks:
     - name: Actualizar la lista de paquetes
       ansible.builtin.apt:
@@ -81,7 +81,7 @@ En este playbook eliminaremos el paquete `apache2` si está instalado.
 ```yaml
 - name: Eliminar Apache2 del sistema
   hosts: all  # Reemplazar con el nombre del host o grupo de hosts
-  become: true
+  become: true  # Permite ejecutar el playbook con permisos de superusuario  
   tasks:
     - name: Eliminar el paquete Apache2
       ansible.builtin.apt:
