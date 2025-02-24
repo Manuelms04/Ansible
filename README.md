@@ -100,5 +100,5 @@ Si no hay salida, significa que `apache2` ha sido eliminado correctamente.
 ## **3.- Referencias**  
 - [Documentación oficial de Ansible sobre el módulo `apt`](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/apt_module.html)  
 - [Guía oficial de Ansible](https://docs.ansible.com/ansible/latest/user_guide/index.html)  
-
+- [Manuel Domínguez](https://github.com/mftienda)
 ---
