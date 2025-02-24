@@ -19,7 +19,7 @@ En este playbook instalaremos el servidor web `nginx` en un sistema Ubuntu/Debia
 #### **Archivo:** `instalar_nginx.yaml`
 ```yaml
 - name: Instalar Nginx en un servidor Debian/Ubuntu
-  hosts: servidores  # Reemplazar con el nombre del host o grupo de hosts
+  hosts: all  # Reemplazar con el nombre del host o grupo de hosts
   become: true  # Permite ejecutar el playbook con permisos de superusuario
   tasks:
     - name: Instalar el paquete Nginx
@@ -48,7 +48,7 @@ Este playbook actualizará todos los paquetes instalados en el sistema a sus úl
 #### **Archivo:** `actualizar_sistema.yaml`
 ```yaml
 - name: Actualizar los paquetes del sistema
-  hosts: servidores
+  hosts: all  # Reemplazar con el nombre del host o grupo de hosts
   become: true
   tasks:
     - name: Actualizar la lista de paquetes
@@ -80,7 +80,7 @@ En este playbook eliminaremos el paquete `apache2` si está instalado.
 #### **Archivo:** `eliminar_apache.yaml`
 ```yaml
 - name: Eliminar Apache2 del sistema
-  hosts: servidores
+  hosts: all  # Reemplazar con el nombre del host o grupo de hosts
   become: true
   tasks:
     - name: Eliminar el paquete Apache2
