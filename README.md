@@ -13,7 +13,7 @@ El módulo `hostname` de Ansible permite gestionar el nombre del host de un sist
 ## **2.- Ejemplos de funcionamiento**  
 
 ### **Ejemplo 1: Cambiar el nombre del host**  
-Este playbook cambia el nombre del host de a `servidor1` en un sistema Ubuntu/Debian.
+- Este playbook cambia el nombre del host de a `servidor1` en un sistema Ubuntu/Debian.
 
 #### **Archivo:** `cambiar_hostname.yaml`
 ```yaml
@@ -41,7 +41,7 @@ El comando debería devolver `servidor1`.
 ---
 
 ### **Ejemplo 2: Verificar el nombre del host**  
-Este playbook obtiene el nombre del host actual del sistema sin realizar ningún cambio.
+- Este playbook obtiene el nombre del host actual del sistema sin realizar ningún cambio.
 
 #### **Archivo:** `verificar_hostname.yaml`
 ```yaml
@@ -71,7 +71,7 @@ El playbook imprimirá el nombre actual del host.
 ---
 
 ### **Ejemplo 3: Cambiar el nombre del host con el uso de una variable**  
-Este playbook cambia dinámicamente el nombre del host según una variable definida.
+- Este playbook cambia dinámicamente el nombre del host según una variable definida.
 
 #### **Archivo:** `cambiar_hostname_variable.yaml`
 ```yaml
