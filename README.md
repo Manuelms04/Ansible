@@ -39,7 +39,6 @@ hostname
 El comando debería devolver `servidor1`.
 
 --- 
---- 
 
 🚨 **EJECUCION:** 🚨
 
@@ -51,6 +50,7 @@ El comando debería devolver `servidor1`.
 ![comprobacion1](/img/comprobacion1.png)
 
 ---
+--- 
 
 ### **Ejemplo 2: Verificar el nombre del host**  
 - Este playbook obtiene el nombre del host actual del sistema sin realizar ningún cambio.
@@ -78,7 +78,6 @@ ansible-playbook verificar_hostname.yaml
 El playbook imprimirá el nombre actual del host.
 
 --- 
---- 
 
 🚨 **EJECUCION:** 🚨
 
@@ -90,6 +89,7 @@ El playbook imprimirá el nombre actual del host.
 ![comprobacion2](/img/comprobacion2.png)
 
 ---
+--- 
 
 ### **Ejemplo 3: Cambiar el nombre del host con el uso de una variable**  
 - Este playbook cambia dinámicamente el nombre del host según una variable definida.
@@ -117,8 +117,7 @@ hostname
 ```
 Debería devolver el nuevo nombre del host, `servidor-dinamico`.
 
---- 
---- 
+---  
 
 🚨 **EJECUCION:** 🚨
 
@@ -130,6 +129,7 @@ Debería devolver el nuevo nombre del host, `servidor-dinamico`.
 ![comprobacion3](/img/comprobacion3.png)
 
 ---
+--- 
 
 ## **3.- Referencias**  
 - [Documentación oficial de Ansible sobre el módulo `hostname`](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/hostname_module.html#ansible-collections-ansible-builtin-hostname-module)  
