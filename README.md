@@ -39,12 +39,12 @@ hostname
 El comando debería devolver `servidor1`.
 --- 
 
-_Ejecucion:_
+🚨 **Ejecucion:** 🚨
 
 ![ejecucion1](/img/ejecucion1.png)
 ---
 
-_Comprobacion:_
+🚨 **COMPROBACION:** 🚨
 
 ![comprobacion1](/img/comprobacion1.png)
 
@@ -76,12 +76,12 @@ ansible-playbook verificar_hostname.yaml
 El playbook imprimirá el nombre actual del host.
 --- 
 
-_Ejecucion:_
+🚨 **Ejecucion:** 🚨
 
 ![ejecucion2](/img/ejecucion2.png)
 ---
 
-_Comprobacion:_
+🚨 **COMPROBACION:** 🚨
 
 ![comprobacion2](/img/comprobacion2.png)
 
@@ -114,12 +114,12 @@ hostname
 Debería devolver el nuevo nombre del host, `servidor-dinamico`.
 --- 
 
-_Ejecucion:_
+🚨 **Ejecucion:** 🚨
 
 ![ejecucion3](/img/ejecucion3.png)
 ---
 
-_Comprobacion:_
+🚨 **COMPROBACION:** 🚨
 
 ![comprobacion3](/img/comprobacion3.png)
 
