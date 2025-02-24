@@ -16,7 +16,7 @@ El módulo `apt` de Ansible se utiliza para gestionar paquetes en sistemas basad
 ### **Ejemplo 1: Instalar un paquete**  
 En este playbook instalaremos el servidor web `nginx` en un sistema Ubuntu/Debian.
 
-#### **Archivo:** `instalar_nginx.yml`
+#### **Archivo:** `instalar_nginx.yaml`
 ```yaml
 - name: Instalar Nginx en un servidor Debian/Ubuntu
   hosts: servidores  # Reemplazar con el nombre del host o grupo de hosts
@@ -29,7 +29,7 @@ En este playbook instalaremos el servidor web `nginx` en un sistema Ubuntu/Debia
 ```
 #### **Comando para ejecutar el Playbook**
 ```bash
-ansible-playbook instalar_nginx.yml
+ansible-playbook instalar_nginx.yaml
 ```
 
 #### **Verificación**  
@@ -43,7 +43,7 @@ Si `nginx` está en ejecución, la instalación fue exitosa.
 ### **Ejemplo 2: Actualizar todos los paquetes del sistema**  
 Este playbook actualizará todos los paquetes instalados en el sistema a sus últimas versiones.
 
-#### **Archivo:** `actualizar_sistema.yml`
+#### **Archivo:** `actualizar_sistema.yaml`
 ```yaml
 - name: Actualizar los paquetes del sistema
   hosts: servidores
@@ -59,7 +59,7 @@ Este playbook actualizará todos los paquetes instalados en el sistema a sus úl
 ```
 #### **Comando para ejecutar el Playbook**
 ```bash
-ansible-playbook actualizar_sistema.yml
+ansible-playbook actualizar_sistema.yaml
 ```
 
 #### **Verificación**  
@@ -73,7 +73,7 @@ Si no hay paquetes listados, significa que el sistema está actualizado.
 ### **Ejemplo 3: Eliminar un paquete**  
 En este playbook eliminaremos el paquete `apache2` si está instalado.
 
-#### **Archivo:** `eliminar_apache.yml`
+#### **Archivo:** `eliminar_apache.yaml`
 ```yaml
 - name: Eliminar Apache2 del sistema
   hosts: servidores
@@ -86,7 +86,7 @@ En este playbook eliminaremos el paquete `apache2` si está instalado.
 ```
 #### **Comando para ejecutar el Playbook**
 ```bash
-ansible-playbook eliminar_apache.yml
+ansible-playbook eliminar_apache.yaml
 ```
 
 #### **Verificación**  
