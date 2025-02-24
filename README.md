@@ -102,5 +102,3 @@ Si no hay salida, significa que `apache2` ha sido eliminado correctamente.
 - [Guía oficial de Ansible](https://docs.ansible.com/ansible/latest/user_guide/index.html)  
 
 ---
-
-✅ **Recuerda:** Toma capturas de pantalla mientras ejecutas los Playbooks y agrégalas a tu repositorio. ¡Listo para subir a GitHub! 🚀
