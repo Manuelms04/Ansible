@@ -40,14 +40,14 @@ El comando debería devolver `servidor1`.
 
 --- 
 
-🚨 **EJECUCION:** 🚨
+🚨 **EJECUCIÓN:** 🚨
 
-![ejecucion1](/img/ejecucion1.png)
+![EJECUCIÓN1](/img/EJECUCIÓN1.png)
 ---
 
-🚨 **COMPROBACION:** 🚨
+🚨 **COMPROBACIÓN:** 🚨
 
-![comprobacion1](/img/comprobacion1.png)
+![COMPROBACIÓN1](/img/COMPROBACIÓN1.png)
 
 ---
 --- 
@@ -81,14 +81,14 @@ hostname
 
 --- 
 
-🚨 **EJECUCION:** 🚨
+🚨 **EJECUCIÓN:** 🚨
 
-![ejecucion2](/img/ejecucion2.png)
+![EJECUCIÓN2](/img/EJECUCIÓN2.png)
 ---
 
-🚨 **COMPROBACION:** 🚨
+🚨 **COMPROBACIÓN:** 🚨
 
-![comprobacion2](/img/comprobacion2.png)
+![COMPROBACIÓN2](/img/COMPROBACIÓN2.png)
 
 ---
 --- 
@@ -121,14 +121,14 @@ Debería devolver el nuevo nombre del host, `servidor-dinamico`.
 
 ---  
 
-🚨 **EJECUCION:** 🚨
+🚨 **EJECUCIÓN:** 🚨
 
-![ejecucion3](/img/ejecucion3.png)
+![EJECUCIÓN3](/img/EJECUCIÓN3.png)
 ---
 
-🚨 **COMPROBACION:** 🚨
+🚨 **COMPROBACIÓN:** 🚨
 
-![comprobacion3](/img/comprobacion3.png)
+![COMPROBACIÓN3](/img/COMPROBACIÓN3.png)
 
 ---
 --- 
