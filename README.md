@@ -1,6 +1,6 @@
 # ANSIBLE
 
-![ansible](/ansible1.png)
+![ansible](/img/ansible1.png)
 
 # **Estudio del Módulo `hostname` en Ansible**  
 
